@@ -37,6 +37,4 @@ jobs:
 
       - name: Run the mailer
         run: |
-          python3 Sources/Main.py
-        env:
-          SECRET_KEY: ${{ secrets.SOME_SUPER_SECRET }}
+          echo "MY_SECRET_KEY is set to: ${{ secrets.SOME_SUPER_SECRET }}"
