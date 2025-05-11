@@ -38,5 +38,5 @@ jobs:
       - name: Run the mailer
         run: |
           python3 Sources/Main.py
-        env:  # Set env variables only for this step
-          SECRET_KEY: some_secret_key
+        env:
+          SECRET_KEY: ${{ secrets.SOME_SUPER_SECRET }}

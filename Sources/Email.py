@@ -8,8 +8,11 @@ load_dotenv()
 
 class EmailDriver():
   def __init__(self):
-    self.email = os.getenv("EMAIL_SENDER")
-    self.password = os.getenv("EMAIL_PASSWORD")
+    currentEnv = os.getenv('RUNNING_ENVIRONMENT')
+
+    if currentEnv != 'production':
+      self.email = os.getenv("EMAIL_SENDER")
+      self.password = os.getenv("EMAIL_PASSWORD")
     pass
 
   def basicSend(self, to, subject, text):
