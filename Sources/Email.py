@@ -27,7 +27,6 @@ class EmailDriver():
     msg.attach(MIMEText(html_body, 'html'))
     try:
       with smtplib.SMTP('smtp.mail.yahoo.com', 587) as server:
-        # server.set_debuglevel(1)
         server.starttls()
         server.login(self.email, self.password) 
         server.sendmail(self.email, to, msg.as_string())
