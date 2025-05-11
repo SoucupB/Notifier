@@ -8,12 +8,8 @@ load_dotenv()
 
 class EmailDriver():
   def __init__(self):
-    currentEnv = os.getenv('RUNNING_ENVIRONMENT')
-
-    if currentEnv != 'production':
-      self.email = os.getenv("EMAIL_SENDER")
-      self.password = os.getenv("EMAIL_PASSWORD")
-    pass
+    self.email = os.getenv("EMAIL_SENDER")
+    self.password = os.getenv("EMAIL_PASSWORD")
 
   def basicSend(self, to, subject, text):
     msg = MIMEMultipart()

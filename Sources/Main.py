@@ -7,11 +7,10 @@ from dotenv import load_dotenv
 load_dotenv()
 # driver = WebDriver()
 def getFinancialData():
-  print(os.getenv('SECRET_KEY'))
   # brdDriver = BRDDriver(driver)
   # print(brdDriver.data['EUR'])
-  # eml = EmailDriver()
-  # eml.basicSend(os.getenv("EMAIL_SEND_TO"), "Test subject", "Yolo data")
+  eml = EmailDriver()
+  eml.basicSend(os.getenv("EMAIL_SEND_TO"), "Test subject", "Yolo data")
 
 getFinancialData()
 
