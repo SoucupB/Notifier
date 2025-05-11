@@ -37,4 +37,4 @@ jobs:
 
       - name: Run Tests (if any)
         run: |
-          python3 Sources/Mail.py
+          python3 Sources/Main.py
