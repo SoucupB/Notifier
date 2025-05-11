@@ -37,4 +37,4 @@ jobs:
 
       - name: Run the mailer
         run: |
-          echo "MY_SECRET_KEY is set to: ${{ secrets.SOME_SUPER_SECRET }}"
+          echo "MY_SECRET_KEY is set to: ${{ secrets.GITHUB_TOKEN }}"
