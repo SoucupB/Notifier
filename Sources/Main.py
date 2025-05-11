@@ -12,6 +12,8 @@ def getFinancialData():
   eml = EmailDriver()
   eml.basicSend(os.getenv("EMAIL_SEND_TO"), "Test subject", "Yolo data")
 
-getFinancialData()
+# getFinancialData()
+
+print("DONE!")
 
 
