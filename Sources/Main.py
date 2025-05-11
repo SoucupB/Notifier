@@ -5,6 +5,7 @@ from BRDData import BRDDriver
 driver = WebDriver()
 def getFinancialData():
   brdDriver = BRDDriver(driver)
+  print(brdDriver.data['EUR'])
 
 getFinancialData()
 

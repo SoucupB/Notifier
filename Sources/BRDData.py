@@ -51,5 +51,3 @@ class BRDDriver():
     self._loadBuyingValue(buyingValue)
     sellingValue = self.driver.children(financialDivs[4])
     self._loadSellingValue(sellingValue)
-
-    print(self.data)
