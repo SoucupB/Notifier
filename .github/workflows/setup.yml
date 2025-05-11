@@ -37,4 +37,8 @@ jobs:
 
       - name: Run the mailer
         run: |
-          echo "MY_SECRET_KEY is set to: ${{ secrets.GITHUB_TOKEN }}"
+          if [ -z "$SOME_SUPER_SECRET" ]; then
+            echo "❌ Secret is empty"
+          else
+            echo "✅ Secret is set and has length ${#SOME_SUPER_SECRET}"
+          fi
