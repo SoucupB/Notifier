@@ -35,6 +35,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: Run Tests (if any)
+      - name: Run the mailer
         run: |
           python3 Sources/Main.py

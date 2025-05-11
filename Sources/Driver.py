@@ -6,12 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import os
 
 class WebDriver():
   def __init__(self, maxWaitPerElement = 10):
     options = Options()
     options.add_argument("--headless=new")
-    self.service = Service('Engine/chromedriver.exe')
+    self.service = Service(ChromeDriverManager().install())
     self.driver = webdriver.Chrome(service=self.service, options=options)
     self._isOpened = False
     self.maxWaitPerElement = maxWaitPerElement * 1000
