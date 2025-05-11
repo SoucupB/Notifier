@@ -42,10 +42,13 @@ class WebDriver():
 
     return element
   
-  def children(self, element):
+  def children(self, element, tag = None):
     response = []
     children = element.find_elements(By.XPATH, './*')
     for child in children:
+      if tag and child.tag_name == tag:
+        response.append(child)
+        continue
       response.append(child)
 
     return response
