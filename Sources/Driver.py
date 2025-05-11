@@ -41,4 +41,12 @@ class WebDriver():
       time.sleep(1)
 
     return element
+  
+  def children(self, element):
+    response = []
+    children = element.find_elements(By.XPATH, './*')
+    for child in children:
+      response.append(child)
+
+    return response
       
