@@ -41,3 +41,4 @@ jobs:
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
           EMAIL_SEND_TO: ${{ secrets.EMAIL_SEND_TO }}
         run: python3 Sources/Main.py
+
