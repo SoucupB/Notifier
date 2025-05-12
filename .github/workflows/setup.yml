@@ -2,7 +2,7 @@ name: Python Setup with WebDriver and Selenium
 
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '0 8 * * *'
   push:
     branches:
       - main
