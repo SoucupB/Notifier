@@ -11,7 +11,7 @@ def getFinancialData():
   # response = ""
   # for key, value in brdDriver.data.items():
   #   response += f"<p>Currency: {key}, Selling by: {value['sell_value']}, Buying by: {value['buy_value']}</p>"
-  print(os.getenv("EMAIL_SEND_TO"))
+  print(os.getenv("EMAIL_SEND_TO")[:5])
   # eml = EmailDriver()
   # eml.basicSend(os.getenv("EMAIL_SEND_TO"), "Currency data", response)
 
